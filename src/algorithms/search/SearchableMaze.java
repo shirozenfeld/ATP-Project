@@ -22,11 +22,6 @@ public class SearchableMaze implements ISearchable{
         this.maze = maze;
     }
 
-
-    public Maze getMaze () {
-        return this.maze;
-    }
-
     @Override
     public MazeState[][] getMazeState () {return this.newMazeState;}
 

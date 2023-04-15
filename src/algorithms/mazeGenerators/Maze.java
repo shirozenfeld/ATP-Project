@@ -10,7 +10,6 @@ public class Maze {
     private Position startPosition;
     private Position endPosition;
 
-//    public Maze(int rows, int columns, int[][] mazeMatrix) {
     public Maze(int[][] mazeMatrix, Position startPosition, Position endPosition) {
         this.rows = mazeMatrix.length;
         this.columns = mazeMatrix[0].length;
@@ -30,7 +29,7 @@ public class Maze {
                 "maze=" + Arrays.toString(mazeMatrix) +
                 '}';
     }
-    public void printMaze() {
+    public void print() {
         for(int i=0;i<rows;i++) {
             for (int j = 0; j < columns; j++) {
                 if(i==0 && j==0){

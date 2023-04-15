@@ -44,10 +44,6 @@ public abstract class AState {
         return this.currState;
     }
 
-    public void setCurrState(Object currState) {
-        this.currState = currState;
-    }
-
     public AState getParentState() {
         return parentState;
     }

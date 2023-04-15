@@ -17,7 +17,4 @@ public abstract class AMazeGenerator implements IMazeGenerator{
         return finishGenerateTime - startGenerateTime;
     }
 
-    public Maze getMaze() {
-        return maze;
-    }
 }

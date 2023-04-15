@@ -2,20 +2,6 @@ package algorithms.mazeGenerators;
 import java.util.*;
 import java.util.Random;
 
-/**
- * Created by Gil & Netta on 08/04/2023.
- * MyMazeGenerator, extends AMazeGenerator
- * based on Prim's Randomly maze generator algorithm
- * 1. create maze full of walls
- * 2. pick random start position on the border
- * 3. add to list all its unvisited(walls) neighbours
- * 4. while list isnt empty randomly pick from the list a position
- * 4.1 if position has only one passage neighbour
- * 4.1.1 add to list all its unvisited neighbours
- * 4.1.2 turn the picked position to a passage
- * 4.2 remove picked position from list
- */
-
 public class MyMazeGenerator extends AMazeGenerator{
 
     public Maze generate (int rows, int columns){
@@ -47,15 +33,11 @@ public class MyMazeGenerator extends AMazeGenerator{
             Random rand = new Random();
             int randomIndex = rand.nextInt(0,neighborList.size());
             Position new_pos = neighborList.get(randomIndex);
-            //.out.println("Chosen neighbor row index: " + new_pos.getRowIndex() + " column index " + new_pos.getColumnIndex());
             //count how many neighbors are passages
             int counterPassages = 0;
 
             //same column, row below
             try{
-//                System.out.println("mazeMatrix[new_pos.getRowIndex()-1][new_pos.getColumnIndex()]" +
-//                        mazeMatrix[new_pos.getRowIndex()-1][new_pos.getColumnIndex()]);
-
                 if(mazeMatrix[new_pos.getRowIndex()-1][new_pos.getColumnIndex()] == 0){
                     counterPassages++;
                 }
@@ -67,9 +49,6 @@ public class MyMazeGenerator extends AMazeGenerator{
             //same column, row above
 
             try{
-//                System.out.println("mazeMatrix[new_pos.getRowIndex()+1][new_pos.getColumnIndex()]" +
-//                        mazeMatrix[new_pos.getRowIndex()+1][new_pos.getColumnIndex()]);
-
                 if(mazeMatrix[new_pos.getRowIndex()+1][new_pos.getColumnIndex()] == 0){
                     counterPassages++;
                 }

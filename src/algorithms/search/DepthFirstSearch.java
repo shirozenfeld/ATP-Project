@@ -3,8 +3,6 @@ import java.util.*;
 
 public class DepthFirstSearch extends ASearchingAlgorithm{
 
-    private Stack<AState> stack;
-
     public DepthFirstSearch() {
         this.name = "Depth First Search";
         this.countNodeEvaluated = 0;
