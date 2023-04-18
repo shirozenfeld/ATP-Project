@@ -48,7 +48,7 @@ public class MyMazeGenerator extends AMazeGenerator{
         //while the neighbor list is not empty, choose a random position and check if only one of it's neighbors is a passage
         while(!neighborList.isEmpty()){
             Random rand = new Random();
-            int randomIndex = rand.nextInt(0,neighborList.size());
+            int randomIndex = rand.nextInt(neighborList.size());
             Position new_pos = neighborList.get(randomIndex);
             //count how many neighbors are passages
             int counterPassages = 0;
