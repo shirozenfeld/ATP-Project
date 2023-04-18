@@ -1,7 +1,24 @@
 package algorithms.mazeGenerators;
 import java.util.*;
 import java.util.Random;
-
+/**
+ * MyMazeGenerator is creating a random maze using the Prim's algorithm. The algorithm works as follows:
+ *
+ * 1. Start with a grid of walls.
+ * 2. Pick a cell, mark it as part of the maze. Add the walls of the cell to the wall list.
+ * 3. While there are walls in the list:
+ *    1. Pick a random wall from the list. If the cell on the opposite side isn't in the maze yet, create a passage
+ *       between the current cell and the neighboring cell, and mark the neighboring cell as part of the maze. Add the
+ *       neighboring cell's walls to the wall list.
+ *    2. Remove the wall from the list.
+ * 4. The maze is complete when all cells have been visited.
+ *
+ * This implementation initializes the maze with all walls, then marks the starting cell as part of the maze and adds
+ * its neighboring walls to a list. While the list is not empty, it picks a random wall from the list and checks if it
+ * has only one neighboring cell that is already part of the maze. If so, it creates a passage between the two cells
+ * and adds the neighboring walls of the new cell to the list. It repeats this process until there are no more walls
+ * left to check. Finally, it marks the last cell as part of the maze and returns the resulting maze as a Maze object.
+ */
 public class MyMazeGenerator extends AMazeGenerator{
 
     public Maze generate (int rows, int columns){

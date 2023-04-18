@@ -1,7 +1,7 @@
 package algorithms.search;
 
 import java.util.ArrayList;
-
+// class to save the solution of a search algorithm
 public class Solution {
 
     private ArrayList<AState> solutionPath;

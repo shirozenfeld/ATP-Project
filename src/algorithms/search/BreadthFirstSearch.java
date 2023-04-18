@@ -2,6 +2,14 @@ package algorithms.search;
 
 import java.util.*;
 
+/**
+
+ This class implements the Breadth First Search algorithm to solve a given problem
+ that implements the ISearchable interface. It extends the ASearchingAlgorithm class.
+ Breadth First Search visits all the states at a given depth, before moving to the next level.
+ It uses a priority queue to store the unvisited states, and adds the successors of a state to the
+ queue only if they haven't been visited yet.
+ */
 public class BreadthFirstSearch extends ASearchingAlgorithm{
 
     protected PriorityQueue<AState> queue;
@@ -15,7 +23,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm{
         reset_maze(domain);
         return solveAlgorithm(domain, time_comparator);
     }
-
+    // bfs algorithm
     public Solution solveAlgorithm(ISearchable domain, Comparator<AState> time_comparator) {
         int time = 0;
         PriorityQueue<AState> queue = new PriorityQueue<>(time_comparator);
@@ -48,6 +56,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm{
         return new Solution(path,this.countNodeEvaluated);
     }
 
+    // comparator for the priority queue - general comparator
     Comparator<AState> time_comparator = new Comparator<AState>() {
         @Override
         public int compare(AState o1, AState o2) {

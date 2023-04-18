@@ -1,7 +1,7 @@
 package algorithms.search;
 
 import algorithms.mazeGenerators.Position;
-
+// a certain generic state
 public abstract class AState {
 
     private Object currState;
@@ -23,7 +23,7 @@ public abstract class AState {
         this.visited = false;
         this.time = 0;
     }
-
+    // setters and getters
     public int getTime() {
         return time;
     }

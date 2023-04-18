@@ -9,7 +9,8 @@ public class SearchableMaze implements ISearchable{
     private final MazeState startState;
     private final MazeState endState;
     protected MazeState[][] newMazeState;
-
+    // creating a maze that can be searched by a search algorithm
+    // by creating a new matrix with a MazeState object in each cell according to the given maze
     public SearchableMaze(Maze maze){
         newMazeState = new MazeState[maze.getRows()][maze.getColumns()];
         for(int i=0; i<maze.getRows();i++){
@@ -35,6 +36,7 @@ public class SearchableMaze implements ISearchable{
         return this.endState;
     }
 
+    // a function that gets a certain state and returns it's neighbors that can be visited
     @Override
     public ArrayList<AState> getAllSuccessors(AState state) {
 
