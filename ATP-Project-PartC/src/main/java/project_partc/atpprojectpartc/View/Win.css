@@ -1,0 +1,5 @@
+.root{
+    -fx-background-image: url("background.gif");
+    /*-fx-background-image: url("winner.png");*/
+    -fx-background-repeat: repeat;
+}
