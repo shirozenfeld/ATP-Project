@@ -5,10 +5,10 @@ This project is a Java-based application focused on maze generation, solving, an
 ## Overview
 This project features:
 - **Servers**: Two dedicated servers for maze generation and solving using search algorithms (e.g., BFS, DFS). Communication is achieved through a client-server architecture.
-- **Multi-threading**: Uses a thread pool (`ExecutorService`) for handling multiple concurrent tasks efficiently.
-- **Design Patterns**: Implements MVVM for clean architecture, Observable for state change notifications, and Client-Server for distributed processing.
+- **Multi-threading**: Uses a **thread pool** (`ExecutorService`) for handling multiple concurrent tasks efficiently.
+- **Design Patterns**: Implements **MVVM** for clean architecture, **Observable** for state change notifications, and **Client-Server** for distributed processing.
 - **GUI**: Built with JavaFX for an intuitive and visually engaging user interface.
-- 
+  
 ## Features
 
 - **Maze Generation**: Create mazes of varying complexity using a dedicated server.
