@@ -1,5 +1,5 @@
 
-# ATP-Project-PartC
+# The Maze
 
 This project is a Java-based application focused on maze generation, solving, and visualization. The application is built with a Model-View-ViewModel (MVVM) architecture and includes a graphical user interface (GUI) for user interaction.
 ## Overview
